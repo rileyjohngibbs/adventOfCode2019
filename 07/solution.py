@@ -72,6 +72,8 @@ class Intcode(object):
                 if not self.input_source.output:
                     self.input_source.generate_output()
                 return self.input_source.output.pop(0)
+            else:
+                return self.static_input
 
     @property
     def is_complete(self):
